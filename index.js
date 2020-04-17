@@ -6,7 +6,7 @@ const volleyball = require('volleyball');
 
 const mongoose = require('./db/mongoose');
 
-const port = process.env.MONGODB_URI || 3000;
+
 
 //models
 const User = require('./models/user');
@@ -67,7 +67,7 @@ app.get('/todos/:id', (req, res) => {
 
 
 app.listen(port, () => {
-    console.log(`Started at port${port}`);
+    console.log(`Started at port`);
 });
 
 module.exports = app;
