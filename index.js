@@ -16,6 +16,11 @@ app.use(express.json());
 app.use(volleyball);
 
 //routes
+app.get('/', (req, res) => {
+    res.send({this_time:'it should pas '});
+})
+
+
 app.post('/todos', (req, res) => {
     var todo = new Todo({
         text: req.body.text
