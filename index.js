@@ -4,7 +4,7 @@ const volleyball = require('volleyball');
 
 const mongoose = require('./db/mongoose');
 
-const port = process.env.PORT || 3000;
+const port = process.env.MONGODB_URI || 3000;
 
 //models
 const User = require('./models/user');
