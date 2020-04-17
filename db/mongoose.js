@@ -1,12 +1,11 @@
-
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+require('dotenv').config();
 
 mongoose.Promise = global.Promise;
-     
-var mongouRI = 'mongodb+srv://yusef:<password>@nodeapi-1-qpvve.mongodb.net/test?retryWrites=true&w=majority'
-var localDB = 'mongodb://localhost:27017/TodoApp';
+    
 mongoose.connect(
-     'mongodb+srv://yusef:<password>@nodeapi-1-qpvve.mongodb.net/test?retryWrites=true&w=majority',
+    process.env.MONGODB ,
     { useNewUrlParser: true, useUnifiedTopology: true  }  
     );
 
